@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.submenu.FeedbackAdminHistoryController">
+   <children>
+      <HBox alignment="CENTER" layoutX="8.0" layoutY="96.0" prefHeight="26.0" prefWidth="534.0" style="-fx-background-color: #E6E4EF;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="29.0" text="№ " textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="136.0" text="Комментарий" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="157.0" text="Ответ" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="90.0" text="Дата отзыва" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets right="8.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="80.0" text="Дата ответа" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="88.0" layoutY="16.0" prefHeight="70.0" prefWidth="374.0" spacing="10.0" style="-fx-background-radius: 25;">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="127.0">
+               <children>
+                  <Label fx:id="count_requests_field" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="128.0" text="20000" textAlignment="CENTER" textFill="#f73d3d">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="RIGHT" prefHeight="19.0" prefWidth="126.0" text="Всего комментариев" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
+            <VBox prefHeight="100.0" prefWidth="127.0">
+               <children>
+                  <Label fx:id="count_answers_field" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="128.0" text="20000" textAlignment="CENTER" textFill="#3d62f5">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="RIGHT" prefHeight="19.0" prefWidth="131.0" text="Без ответа" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ScrollPane fx:id="scrollPane" layoutX="3.0" layoutY="129.0" prefHeight="314.0" prefWidth="542.0" style="-fx-background-radius: 15;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

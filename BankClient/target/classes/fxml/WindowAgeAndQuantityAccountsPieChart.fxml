@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.others.AgeAndQuantityAccountsPieChartController">
+    <children>
+        <Label layoutX="780.0" layoutY="-3.0" onMouseClicked="#handleClose" text="X" wrapText="true" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="-3.0">
+            <font>
+                <Font size="21.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9578947424888611" green="0.21617673337459564" blue="0.1631968766450882" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Label>
+        <HBox alignment="TOP_CENTER" layoutX="81.0" layoutY="12.0" prefHeight="38.0" prefWidth="388.0" spacing="10.0" style="-fx-background-color: #E6E4EF; -fx-background-radius: 25;" />
+        <HBox fx:id="hBox" alignment="CENTER_LEFT" layoutX="13.0" layoutY="422.0" prefHeight="18.0" prefWidth="534.0" spacing="20.0">
+            <children>
+                <Label fx:id="warning_label" prefHeight="18.0" prefWidth="159.0" text="Label" visible="false" />
+            </children>
+            <opaqueInsets>
+                <Insets left="20.0" right="20.0" />
+            </opaqueInsets>
+        </HBox>
+        <HBox layoutX="215.0" layoutY="423.0" prefHeight="27.0" prefWidth="330.0" spacing="10.0" style="-fx-background-radius: 15;">
+            <children>
+                <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="312.0" text="Всего клиентов в системе:" textAlignment="RIGHT">
+                    <font>
+                        <Font name="Candara Italic" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="number_label" prefHeight="27.0" prefWidth="52.0" text="l" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Italic" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <PieChart fx:id="pieChart" layoutX="12.0" layoutY="14.0" prefHeight="400.0" prefWidth="534.0" />
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>

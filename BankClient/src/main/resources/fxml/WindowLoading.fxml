@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="225.0" prefWidth="400.0" style="-fx-background-color: #E6E4EF; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.others.LoadingController">
+   <children>
+      <ImageView fitHeight="232.0" fitWidth="400.0" layoutX="-1.0" pickOnBounds="true" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assets/D_ifpffWsAA6vdM.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="deny_button" alignment="CENTER" layoutX="100.0" layoutY="182.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-background-color: #9D9DA0;" stylesheets="@../animation/first.css" text="Отменить загрузку" textAlignment="CENTER" visible="false" />
+      <ProgressIndicator fx:id="progress_bar" layoutX="178.0" layoutY="48.0" prefHeight="39.0" prefWidth="43.0" visible="false" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="48.0" />
+      <Label fx:id="warning_label" alignment="CENTER" layoutX="5.0" layoutY="183.0" prefHeight="22.0" prefWidth="390.0" text="Идет подключение к базе данных. Подождите..." textAlignment="CENTER" textOverrun="CLIP" underline="true" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="warning_label2" alignment="CENTER" layoutX="29.0" layoutY="129.0" prefHeight="54.0" prefWidth="351.0" text="Невозможно подключиться к серверу. Повторите попытку позднее." textAlignment="CENTER" textFill="#ffc2c2" textOverrun="CLIP" underline="true" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

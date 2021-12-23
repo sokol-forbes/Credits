@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="432.0" prefWidth="800.0" style="-fx-background-color: #ECEDEF; -fx-background-radius: 20; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.SingInController">
+    <children>
+        <ImageView fitHeight="473.0" fitWidth="818.0" layoutX="-6.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-29.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-4.56396484375" AnchorPane.topAnchor="-12.0">
+            <image>
+                <Image url="@../assets/SingIn.jpg" />
+            </image>
+            <effect>
+                <BoxBlur height="0.0" />
+            </effect>
+        </ImageView>
+        <AnchorPane layoutX="422.0" prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="-5.0">
+            <effect>
+                <BoxBlur width="14.71" />
+            </effect>
+        </AnchorPane>
+        <Label layoutX="782.0" layoutY="-5.0" onMouseClicked="#handleClose" text="X" textFill="#b47672" wrapText="true">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="239.0" layoutY="76.0" prefHeight="267.0" prefWidth="322.0" style="-fx-background-color: #ECEDEF; -fx-border-color: #000; -fx-border-image-width: 20; -fx-border-radius: 10;">
+            <children>
+                <AnchorPane prefHeight="74.0" prefWidth="300.0" style="-fx-background-color: #000501;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="7.0" prefHeight="63.0" prefWidth="318.0" text="Авторизация" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold Italic" size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <PasswordField fx:id="password_field" alignment="TOP_CENTER" layoutX="26.0" layoutY="139.0" prefHeight="35.0" prefWidth="270.0" promptText="password" style="-fx-background-radius: 30; -fx-border-radius: 25; -fx-border-color: #000;">
+                    <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                    </font>
+                </PasswordField>
+                <TextField fx:id="login_field" alignment="TOP_CENTER" layoutX="27.0" layoutY="86.0" prefHeight="35.0" prefWidth="270.0" promptText="nickname" style="-fx-background-radius: 30; -fx-border-color: #000; -fx-border-radius: 25;">
+                    <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                    </font>
+                </TextField>
+                <Label fx:id="msg_label" alignment="CENTER" layoutX="1.0" layoutY="177.0" prefHeight="18.0" prefWidth="318.0" text="Неверный логин или пароль. Повторите попытку" textAlignment="CENTER" textFill="#f74a4a" visible="false" wrapText="true">
+                    <font>
+                        <Font name="Cambria Bold Italic" size="12.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="forgotPasswordButton" alignment="TOP_CENTER" layoutX="165.0" layoutY="233.0" text="Забыли пароль?" textFill="#0318ff" underline="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+                </Hyperlink>
+                <ImageView fitWidth="28.0" layoutX="30.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/icons/multiple-users-silhouette.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="32.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/icons/key.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="singInButton" layoutX="111.0" layoutY="203.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: #30B261; -fx-border-radius: 15; -fx-background-radius: 15;" stylesheets="@../animation/first.css" text="Войти">
+                    <font>
+                        <Font name="Consolas Italic" size="14.0" />
+                    </font>
+                </Button>
+                <Hyperlink fx:id="singUpButton" alignment="TOP_CENTER" layoutX="81.0" layoutY="233.0" text="Регистрация" textFill="#0318ff" underline="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+                </Hyperlink>
+                <AnchorPane layoutX="4.0" layoutY="240.0" prefHeight="10.0" prefWidth="317.0" style="-fx-background-color: #000501;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

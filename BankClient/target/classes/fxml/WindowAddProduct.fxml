@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="198.0" prefWidth="290.0" style="-fx-border-color: #000; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.submenu.AddProductController">
+    <children>
+        <Label fx:id="label" layoutX="77.0" layoutY="14.0" text="Добавить продукт">
+            <font>
+                <Font name="System Italic" size="15.0" />
+            </font>
+        </Label>
+        <VBox layoutX="8.0" layoutY="47.0" prefHeight="156.0" prefWidth="278.0" spacing="5.0">
+            <children>
+                <TextField fx:id="name_field" alignment="CENTER" prefHeight="26.0" prefWidth="142.0" promptText="Наименование" />
+                <HBox alignment="CENTER" prefHeight="27.0" prefWidth="282.0" spacing="10.0">
+               <children>
+                      <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="282.0" spacing="10.0">
+                          <children>
+                              <ComboBox fx:id="category_field" prefHeight="26.0" prefWidth="155.0" promptText="Категория" />
+                              <ComboBox fx:id="owner_field" prefHeight="26.0" prefWidth="112.0" promptText="Владелец" />
+                          </children>
+                      </HBox>
+               </children></HBox>
+                <HBox alignment="CENTER" prefHeight="27.0" prefWidth="282.0" spacing="10.0">
+                    <children>
+                      <TextField fx:id="price_field" alignment="CENTER" prefHeight="26.0" prefWidth="97.0" promptText="Цена $" />
+                  <TextField fx:id="quantity_field" alignment="CENTER" prefHeight="26.0" prefWidth="97.0" promptText="Количество" />
+                    </children>
+                </HBox>
+            <HBox alignment="CENTER" prefHeight="17.0" prefWidth="278.0">
+               <children>
+                  <Label fx:id="war_label" text="Label" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="14.0" prefWidth="278.0" spacing="25.0">
+               <children>
+                    <Button fx:id="addButton" mnemonicParsing="false" prefHeight="11.0" prefWidth="69.0" text="Добавить" />
+                  <Button mnemonicParsing="false" onMouseClicked="#onMouseClickedAddPhoto" prefHeight="26.0" prefWidth="35.0">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="18.0" onMouseClicked="#onMouseClickedAddPhoto" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/picture.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+        <Label layoutX="277.0" layoutY="-6.0" onMouseClicked="#closeHandler" text="X">
+            <font>
+                <Font size="21.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9607843160629272" green="0.3843137323856354" blue="0.3843137323856354" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Label>
+    </children>
+</AnchorPane>

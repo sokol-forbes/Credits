@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="450.0" prefWidth="830.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.submenu.ManagementController">
+    <children>
+        <TabPane layoutX="4.0" layoutY="26.0" prefHeight="424.0" prefWidth="830.0" stylesheets="@../animation/stylesheet.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+            <tabs>
+                <Tab text="Аккаунты">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ScrollPane prefHeight="395.2" prefWidth="830.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="815.0">
+                                            <children>
+                                                <TableView fx:id="account_table" editable="true" fixedCellSize="0.0" prefHeight="361.0" prefWidth="830.0" stylesheets="@../animation/stylesheet.css" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-15.0" AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="id_column" prefWidth="25.0" text="№" />
+                                                        <TableColumn fx:id="surname_column" onEditCommit="#onEditSurname" prefWidth="173.59996795654297" text="Фамилия" />
+                                                        <TableColumn fx:id="name_column" onEditCommit="#onEditName" prefWidth="130.40005493164062" text="Имя" />
+                                          <TableColumn fx:id="gender_column" onEditCommit="#onEditGender" prefWidth="73.60003662109375" text="Пол" />
+                                                        <TableColumn fx:id="login_column" onEditCommit="#onEditLogin" prefWidth="128.79998779296875" text="Логин" />
+                                                        <TableColumn fx:id="mail_column" onEditCommit="#onEditMail" prefWidth="116.0" text="Почта" />
+                                                        <TableColumn fx:id="role_column" onEditCommit="#onEditRole" prefWidth="66.39996337890625" text="Роль" />
+                                                        <TableColumn fx:id="account_ban" editable="false" prefWidth="112.0" text="Заблокирован" />
+                                                    </columns>
+                                                </TableView>
+                                                <Label fx:id="warning_account_label" layoutX="14.0" layoutY="367.0" prefHeight="18.0" prefWidth="322.0" text="Label" textFill="#bc3636" visible="false">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <HBox layoutX="647.0" layoutY="363.0" prefHeight="26.0" prefWidth="169.0" spacing="15.0">
+                                                    <children>
+                                                        <Button minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#onMouseClickResetAccount" prefHeight="0.0" prefWidth="0.0" textAlignment="CENTER">
+                                                            <graphic>
+                                                                <ImageView fitHeight="15.0" fitWidth="20.0" onMouseClicked="#onMouseClickResetAccount" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../assets/reload.png" />
+                                                                    </image>
+                                                                    <viewport>
+                                                                        <Rectangle2D height="16.0" width="16.0" />
+                                                                    </viewport>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#onMouseClickDeleteAccount" textAlignment="CENTER">
+                                                            <graphic>
+                                                                <ImageView fitHeight="13.0" fitWidth="18.0" onMouseClicked="#onMouseClickDeleteAccount" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../assets/bin.png" />
+                                                                    </image>
+                                                                    <viewport>
+                                                                        <Rectangle2D height="16.0" width="16.0" />
+                                                                    </viewport>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#onMouseClickBlockAccount" textAlignment="CENTER">
+                                                            <graphic>
+                                                                <ImageView fitHeight="13.0" fitWidth="18.0" onMouseClicked="#onMouseClickBlockAccount" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../assets/padlock.png" />
+                                                                    </image>
+                                                                    <viewport>
+                                                                        <Rectangle2D height="16.0" width="16.0" />
+                                                                    </viewport>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Label layoutX="815.2" layoutY="-5.0" onMouseClicked="#handleClose" text="X" textFill="#f56262" wrapText="true" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="-5.0">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <TextField fx:id="filterField" layoutX="333.0" layoutY="13.0" promptText="Поиск" />
+        <ImageView fitHeight="38.0" fitWidth="78.0" layoutX="456.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>

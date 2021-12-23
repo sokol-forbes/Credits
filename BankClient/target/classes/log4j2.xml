@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="MyApp" packages="">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n</Pattern>
+            </PatternLayout>
+        </Console>
+        <File name="MyFile" fileName="clientLog.log">
+            <PatternLayout>
+                <Pattern>%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="by.bsuir.app" additivity="false" level="trace">
+            <AppenderRef ref="MyFile"  />
+        </Logger>
+
+        <Root level="WARN">
+            <AppenderRef ref="STDOUT" />
+        </Root>
+    </Loggers>
+</Configuration>

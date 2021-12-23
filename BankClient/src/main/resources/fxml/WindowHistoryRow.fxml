@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.submenu.CreditHistoryRowController">
+   <children>
+      <HBox alignment="CENTER" layoutY="-27.0" prefHeight="73.0" prefWidth="518.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="id_label" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="26.0" text="125">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="46.0" prefWidth="0.0" />
+            <Label fx:id="name_field" alignment="CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="63.0" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="amount_field" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="50.0" text="30000.00$" textAlignment="CENTER" wrapText="true" />
+            <Separator orientation="VERTICAL" prefHeight="74.0" prefWidth="0.0" />
+            <Label fx:id="params_field" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="66.0" prefWidth="138.0" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="74.0" prefWidth="0.0" />
+            <Label fx:id="request_date_field" alignment="CENTER" prefHeight="57.0" prefWidth="68.0" text="-" wrapText="true">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="solution_field" alignment="CENTER" prefHeight="36.0" prefWidth="59.0" text="На рассмотрении" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="1.0" right="1.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="author_name" alignment="CENTER" prefHeight="47.0" prefWidth="54.0" text="-" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Separator layoutY="69.0" prefHeight="3.2" prefWidth="518.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0" />
+   </children>
+</AnchorPane>

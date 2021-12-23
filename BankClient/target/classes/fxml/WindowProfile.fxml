@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.app.controllers.submenu.ProfileController">
+   <children>
+      <Label layoutX="534.4" layoutY="-3.0" onMouseClicked="#handleClose" prefHeight="26.0" prefWidth="13.0" text="X" wrapText="true" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="-3.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9686274528503418" green="0.3803921639919281" blue="0.3803921639919281" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9686274528503418" green="0.3803921639919281" blue="0.3803921639919281" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fx:id="image_box" blendMode="SRC_ATOP" fitHeight="146.0" fitWidth="140.0" layoutX="19.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/undefined-avatar.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="20.0" layoutY="171.0" prefHeight="6.0" prefWidth="515.0" />
+      <Separator layoutX="169.0" layoutY="18.0" orientation="VERTICAL" prefHeight="145.0" prefWidth="0.0" />
+      <VBox layoutX="216.0" layoutY="23.0" prefHeight="140.0" prefWidth="94.0" spacing="5.0">
+         <children>
+            <Label text="Логин:">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Почта: ">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Пол:">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Возраст:">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Доступ:">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="315.0" layoutY="22.0" prefHeight="146.0" prefWidth="175.0" spacing="5.0">
+         <children>
+            <Label fx:id="login_label" text="Не указано">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="mail_label" text="Не указано">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="sex_label" text="Не указано">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="age_label" text="Не указано">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="role" text="Не указано">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="55.0" layoutY="183.0" prefHeight="20.0" prefWidth="416.0" text="Паспортные данные">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <VBox layoutX="56.0" layoutY="226.0" prefHeight="106.0" prefWidth="186.0">
+         <children>
+            <Label text="Имя:" />
+            <Label prefWidth="54.0" text="Фамилия:" />
+            <Label text="Отчество:" />
+            <Label text="Дата рождения:" />
+            <Label text="Номер паспорта:" />
+            <Label text="Идентификационный номер:" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="58.0" layoutY="356.0" prefHeight="66.0" prefWidth="194.0">
+         <children>
+            <Label text="Дата выдачи:" />
+            <Label text="Дата окончания:" />
+         </children>
+      </VBox>
+      <VBox layoutX="335.0" layoutY="226.0" prefHeight="106.0" prefWidth="162.0">
+         <children>
+            <Label fx:id="name_label" prefHeight="17.0" prefWidth="140.0" text="Не указано" />
+            <Label fx:id="surname_label" prefHeight="17.0" prefWidth="141.0" text="Не указано" />
+            <Label fx:id="third_name_label" prefHeight="17.0" prefWidth="148.0" text="Не указано" />
+            <Label fx:id="birth_label" prefHeight="17.0" prefWidth="144.0" text="Не указано" />
+            <Label fx:id="pass_num_label" prefHeight="17.0" prefWidth="143.0" text="Не указано" />
+            <Label fx:id="path_iden_label" prefHeight="17.0" prefWidth="139.0" text="Не указано" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="335.0" layoutY="356.0" prefHeight="66.0" prefWidth="175.0">
+         <children>
+            <Label fx:id="issue_date" prefHeight="17.0" prefWidth="179.0" text="Не указано" />
+            <Label fx:id="expire_date" prefHeight="17.0" prefWidth="177.0" text="Не указано" />
+         </children>
+      </VBox>
+      <ImageView fitHeight="28.0" fitWidth="26.0" layoutX="508.0" layoutY="138.0" onMouseClicked="#iconHandler" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons/edit.png" />
+         </image>
+      </ImageView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

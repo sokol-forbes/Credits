@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="MyApp" packages="">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n</Pattern>
+            </PatternLayout>
+        </Console>
+        <File name="MyFile" fileName="serverLog.log">
+            <PatternLayout>
+                <Pattern>%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <logger name="org.hibernate" level="error" additivity="false">
+            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="MyFile" />
+        </logger>
+        <logger name="org.hibernate.SQL" level="error" additivity="false">
+            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="MyFile" />
+        </logger>
+        <logger name="org.hibernate.type" level="error" additivity="false">
+            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="MyFile" />
+        </logger>
+        <Root level="INFO">
+            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="MyFile" />
+        </Root>
+    </Loggers>
+</Configuration>
